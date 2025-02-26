@@ -1,10 +1,39 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <title>notion</title>
+    <style>
+        /*!*移除邊距*!設定字體*/
+        body{
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
+        /*放置左上角的圖片*/
+        .container
+        {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            height: 100vh;
+            background-color: #f1f1f1;
+        }
+        .img
+        {
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <img class="img" src="img/notion.jpg" alt="notion.jpg">
+    <div class="word">0</div>
+
+</div>
 </body>
 </html>
