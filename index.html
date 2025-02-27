@@ -21,42 +21,50 @@
             margin-left: 200px; /* 左側邊距，調整容器位置 */
         }
 
-        /* 左上角圖片樣式 */
+        /*notion圖片樣式 */
         .img {
+            width: 13%;
+            max-width: 600px;/* 高度自動調整，保持比例 */
+        }
+
+        /*robot圖片樣式*/
+        .img2 {
             width: 15%;
             max-width: 600px;/* 高度自動調整，保持比例 */
         }
 
         /* 加載動畫圖片樣式 */
         .loading-img {
-            width: 10%;
+            width: 15%;
             max-width: 600px;/* 高度自動調整，保持比例 */
             align-self: flex-end; /* 將圖片對齊到容器的底部 */
-            margin-left: 900px; /* 將圖片向右側推，與其他內容區分 */
         }
 
-        /* 中間文字樣式 */
+        /*主要標題文字 */
         .word {
-            font-size: 60px; /* 字體大小 */
+            font-size: 55px; /* 字體大小 */
             font-weight: 900; /* 字體粗細 */
             margin-bottom: 20px; /* 文字下方的間距 */
-            margin-left: 150px; /* 左側邊距，讓文字不緊貼容器邊緣 */
+            margin-left: 120px; /* 左側邊距，讓文字不緊貼容器邊緣 */
         }
 
         /* 錯誤訊息區域樣式 */
         .error-message {
             line-height: 1.5; /* 行間距，增加可讀性 */
-            font-size: 30px; /* 字體大小 */
+            font-size: 25px; /* 字體大小 */
             font-weight: 400; /* 字體粗細 */
             text-align: left; /* 左對齊文字 */
             margin-top: 20px; /* 上方的間距 */
-            margin-left: 250px; /* 左側邊距，使錯誤訊息區域居中 */
+            margin-left: 250px; /* 左側邊距 */
         }
 
-        /* 詳細的錯誤訊息樣式 */
-        .error-message-1 {
-            margin-left: 20px; /* 左側邊距，使細節不會緊貼邊緣 */
-            font-size: 25px; /* 字體大小，略小於主錯誤訊息 */
+        /* 頁尾 */
+        .footer {
+            font-size: 20px; /* 字體大小 */
+            font-weight: 400; /* 字體粗細 */
+            margin-top: 20px; /* 上方的間距 */
+            color: #998; /* 文字顏色 */
+            margin-left: 50px; /* 左側邊距 */
         }
     </style>
 </head>
@@ -64,34 +72,33 @@
 <body>
 <!-- 整體容器：所有內容的父級容器 -->
 <div class="container">
+    <!-- 主要標題 -->
     <div class="title">
-        <!-- 左上角圖片 -->
-        <img class="img" src="img/notion.jpg" alt="Notion">
-
-        <!-- 加載圖片 -->
-        <img src="img/loading.gif" alt="描述文字" class="loading-img">
 
         <!-- 中上方的文字 -->
-        <div class="word">Notion 載入過程出現錯誤&nbsp;重新連接中</div>
+        <div class="word">
+            <img class="img" src="img/notion.jpg" alt="Notion">Notion 目前暫時無法使用<img class="loading-img" src="img/loading.gif" alt="描述文字" ><br>
+            Notion is temporarily unavailable.
+        </div>
+
     </div>
 
     <!-- 下方錯誤訊息 -->
     <div class="error-message">
-        請檢查您的網路連線，或稍後再試。<br>
-        Please check your network connection or try again later.<br><br>
 
-        如果問題持續，請考慮以下步驟：<br>
-        If the problem persists, please consider the following steps:<br>
+        我們正在努力修復中，請稍後再試！<br>
+        We are working hard to fix this issue. Please try again later!<br><br>
+        若您急需存取筆記，請嘗試開啟 Notion 的離線模式，或稍後重新整理頁面。<br>
+        If you urgently need to access your notes, please try enabling Notion's offline mode or refresh the page later.<br><br>
+        您可以關注我們的 <a href="https://x.com/NotionHQ" target="_blank">Twitter </a>，了解最新的修復進度。<br>
+        You can follow our <a href=https://x.com/NotionHQ" target=\"_blank\">Twitter </a> to stay updated on the latest fixes.<br>
+        <img class="img2" src= "img/robot-removebg-preview.png" alt="robot error">
 
-        <!-- 錯誤訊息細節 -->
-        <div class="error-message-1">
-            1. 重新啟動您的路由器。<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;Restart your router。<br>
-            2. 確認您的設備已連接到網路。<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;Ensure your device is connected to the network。<br>
-            3. 清除瀏覽器快取並重試。<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;Clear your browser cache and try again。
+        <div class="footer">
+            感謝您的耐心等待，給您帶來不便，敬請見諒。<br>
+            Thank you for your patience. We apologize for any inconvenience caused.
         </div>
+
     </div>
 </div>
 
