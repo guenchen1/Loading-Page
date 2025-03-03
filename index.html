@@ -6,100 +6,100 @@
     <title>Notion 嘗試重新連接</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
     <style>
-        /* 全局樣式：移除頁面邊距並設置字體 */
         body {
-            margin: 0; /* 移除預設的頁面邊距 */
-            font-family: 'Inter', sans-serif; /* 使用 Google 的 Inter 字體 */
-            background-color: #f1f1f1; /* 設定頁面的背景顏色 */
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
         }
 
-        /* 整體容器：設定頁面主體布局 */
         .container {
-            display: flex; /* 使用 Flexbox 佈局，使內容更靈活 */
-            flex-direction: column; /* 垂直排列內容 */
-            height: 100vh; /* 容器的高度為視窗的高度 */
-            margin-left: 200px; /* 左側邊距，調整容器位置 */
-            user-select: none; /* 禁止用戶選擇文本 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            max-width: 800px;
+            user-select: none;
+            margin-top: 100px;
         }
 
-        /*notion圖片樣式 */
-        .img {
-            width: 13%;
-            max-width: 600px;/* 高度自動調整，保持比例 */
-        }
-
-        /*robot圖片樣式*/
-        .img2 {
-            width: 15%;
-            max-width: 600px;/* 高度自動調整，保持比例 */
-        }
-
-        /* 加載動畫圖片樣式 */
-        .loading-img {
-            width: 15%;
-            max-width: 600px;/* 高度自動調整，保持比例 */
-            align-self: flex-end; /* 將圖片對齊到容器的底部 */
-        }
-
-        /*主要標題文字 */
         .title {
-            font-size: 55px; /* 字體大小 */
-            font-weight: 900; /* 字體粗細 */
-            margin-bottom: 20px; /* 文字下方的間距 */
-            margin-left: 120px; /* 左側邊距，讓文字不緊貼容器邊緣 */
+            font-size: 55px;
+            font-weight: 900;
+            margin-bottom: 20px;
         }
 
-        /* 錯誤訊息區域樣式 */
         .error-message {
-            line-height: 1.5; /* 行間距，增加可讀性 */
-            font-size: 25px; /* 字體大小 */
-            font-weight: 400; /* 字體粗細 */
-            text-align: left; /* 左對齊文字 */
-            margin-top: 20px; /* 上方的間距 */
-            margin-left: 250px; /* 左側邊距 */
+            line-height: 1.5;
+            font-size: 25px;
+            font-weight: 400;
+            margin-top: 20px;
         }
 
-        /* 頁尾 */
         .footer {
-            font-size: 20px; /* 字體大小 */
-            font-weight: 400; /* 字體粗細 */
-            margin-top: 20px; /* 上方的間距 */
-            color: #998; /* 文字顏色 */
-            margin-left: 50px; /* 左側邊距 */
+            font-size: 20px;
+            font-weight: 400;
+            margin-top: 20px;
+            color: #998;
+        }
+
+        .img, .img2, .loading-img {
+            width: 13%;
+            max-width: 600px;
+        }
+
+        .loading-img {
+            align-self: center;
+        }
+
+        @media screen and (max-width: 768px) {
+            .title {
+                font-size: 35px;
+            }
+
+            .error-message {
+                font-size: 18px;
+            }
+
+            .footer {
+                font-size: 16px;
+            }
+
+            .img, .img2, .loading-img {
+                width: 30%;
+                max-width: 100%;
+            }
         }
     </style>
 </head>
-
 <body>
-<!-- 整體容器：所有內容的父級容器 -->
 <div class="container">
-    <!-- 主要標題 -->
     <div class="title">
-
-        <!-- 中上方的文字 -->
-        <img class="img" src="img/notion.jpg" alt="Notion">Notion 目前暫時無法使用<img class="loading-img" src="img/loading.gif" alt="描述文字" ><br>
-        Notion is temporarily unavailable.
-
+        <img class="img" src="img/notion.jpg" alt="Notion"><br>
+        Notion 目前暫時無法使用
+        <br>Notion is temporarily unavailable.
+        <br><img class="loading-img" src="img/loading.gif" alt="加載中">
     </div>
 
-    <!-- 下方錯誤訊息 -->
     <div class="error-message">
-
         我們正在努力修復中，請稍後再試！<br>
         We are working hard to fix this issue. Please try again later!<br><br>
         若您急需存取筆記，請嘗試開啟 Notion 的離線模式，或稍後重新整理頁面。<br>
         If you urgently need to access your notes, please try enabling Notion's offline mode or refresh the page later.<br><br>
         您可以關注我們的 <a href="https://x.com/NotionHQ" target="_blank">Twitter </a>，了解最新的修復進度。<br>
-        You can follow our <a href=https://x.com/NotionHQ" target=\"_blank\">Twitter </a> to stay updated on the latest fixes.<br>
-        <img class="img2" src= "img/robot-removebg-preview.png" alt="robot error">
+        You can follow our <a href="https://x.com/NotionHQ" target="_blank">Twitter</a> to stay updated on the latest fixes.<br>
+        <img class="img2" src="img/robot-removebg-preview.png" alt="robot error">
+    </div>
 
-        <div class="footer">
-            感謝您的耐心等待，給您帶來不便，敬請見諒。<br>
-            Thank you for your patience. We apologize for any inconvenience caused.
-        </div>
-
+    <div class="footer">
+        感謝您的耐心等待，給您帶來不便，敬請見諒。<br>
+        Thank you for your patience. We apologize for any inconvenience caused.
     </div>
 </div>
-
 </body>
 </html>
